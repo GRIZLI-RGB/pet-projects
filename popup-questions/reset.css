@@ -1,0 +1,49 @@
+*,
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  cursor: pointer;
+}
+
+:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
