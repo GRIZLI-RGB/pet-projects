@@ -1,0 +1,44 @@
+* {
+    font: 400 16px 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.number {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 128px;
+    font-weight: 500;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.toolbar__minus,
+.toolbar__reset,
+.toolbar__plus {
+    font-size: 20px;
+    transition: all .2s;
+    border: 1px solid #000;
+    border-radius: 100px;
+    padding: 10px 20px;
+    letter-spacing: 0.05em;
+    width: 170px;
+    margin: 0 15px;
+}
+
+.toolbar__minus:hover,
+.toolbar__reset:hover,
+.toolbar__plus:hover {
+    background-color: #000;
+    color: #fff;
+}
