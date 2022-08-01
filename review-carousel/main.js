@@ -26,7 +26,34 @@ let img = document.getElementsByClassName('reviews__box-item-img')[0];
 let title = document.getElementsByClassName('reviews__box-item-title')[0];
 let special = document.getElementsByClassName('reviews__box-item-special')[0];
 let opinion = document.getElementsByClassName('reviews__box-item-opinion')[0];
+let prev = document.getElementsByClassName('reviews__box-navigation-right')[0]
+let next = document.getElementsByClassName('reviews__box-navigation-left')[0]
 
+let index = 0;
+
+img.style.backgroundImage = 'url(' + users[0].img + ')';
 title.textContent = users[0].name;
 special.textContent = users[0].special;
 opinion.textContent = users[0].opinion;
+
+prev.addEventListener('click', function () {
+    index--;
+    if(index < 0) {
+        index = 2;
+    };
+    img.style.backgroundImage = 'url(' + users[index].img + ')';
+    title.textContent = users[index].name;
+    special.textContent = users[index].special;
+    opinion.textContent = users[index].opinion;
+});
+
+next.addEventListener('click', function () {
+    index++;
+    if(index >= users.length) {
+        index = 0;
+    };
+    img.style.backgroundImage = 'url(' + users[index].img + ')';
+    title.textContent = users[index].name;
+    special.textContent = users[index].special;
+    opinion.textContent = users[index].opinion;
+});
